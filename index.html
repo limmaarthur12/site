@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Institucional</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <style>
+        body {
+            background: linear-gradient(135deg, #800020 60%, #000000 100%);
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+        }a
+        .navbar {
+            margin-bottom: 40px;
+            border-radius: 0;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px 25px 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .login-container h2 {
+            margin-bottom: 25px;
+            color: #860000;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #222;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .btn-block {
+            width: 100%;
+        }
+        .form-text {
+            font-size: 12px;
+            color: #888;
+        }
+        .navbar {
+            background: #181818;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            padding: 4px 18px;
+            height: 48px;
+        }
+        .navbar-brand {
+            color: #610000 !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .navbar-nav > li > a {
+            color: #610000 !important;
+            font-size: 1.1rem;
+            margin-right: 18px;
+            transition: color 0.2s;
+        }
+        .navbar-nav > li.active > a,
+        .navbar-nav > li > a:hover {
+            color: #610000 !important;
+            background: transparent !important;
+        }
+        .navbar-nav > li.disabled > a {
+            color: #610000 !important;
+            cursor: not-allowed;
+        }
+        .navbar-brand-icon {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            vertical-align: middle;
+            object-fit: contain;
+           }
+    </style>
+</head>
+<body>
+   
+      <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-2">
+         <img src="imagens/martelin de ouro.png" class="navbar-brand-icon" alt="Logo">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">TMO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos.html">Preços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <div class="d-flex justify-content-end align-items-center px-4 py-2"></div>
+        <button id="darkModeToggle" class="btn btn-outline-dark btn-sm">
+            <span id="toggleIcon" class="bi bi-moon"></span> Modo Escuro
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.js"></script>
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        const toggleIcon = document.getElementById('toggleIcon');
+        let darkMode = false;
+
+        toggleBtn.addEventListener('click', function () {
+            darkMode = !darkMode;
+            const loginContainer = document.querySelector('.login-container');
+            const footer = document.querySelector('footer');
+            const titles = document.querySelectorAll('h2, h1, h3, h4, h5, h6');
+            if (darkMode) {
+                document.body.style.background = 'linear-gradient(135deg, #181818 60%, #222 100%)';
+                loginContainer.style.background = '#222';
+                loginContainer.style.color = '#fff';
+                footer.style.background = '#111';
+                footer.style.color = '#fff';
+                toggleBtn.classList.remove('btn-outline-dark');
+                toggleBtn.classList.add('btn-outline-light');
+                toggleIcon.className = 'bi bi-sun';
+                toggleBtn.textContent = 'Modo Claro';
+                toggleBtn.prepend(toggleIcon);
+                titles.forEach(title => {
+                    title.style.color = '#FFD700';
+                });
+            } else {
+                document.body.style.background = 'linear-gradient(135deg, #800020 60%, #000000 100%)';
+                loginContainer.style.background = '#fff';
+                loginContainer.style.color = '#000';
+                footer.style.background = '#222';
+                footer.style.color = '#fff';
+                toggleBtn.classList.remove('btn-outline-light');
+                toggleBtn.classList.add('btn-outline-dark');
+                toggleIcon.className = 'bi bi-moon';
+                toggleBtn.textContent = 'Modo Escuro';
+                toggleBtn.prepend(toggleIcon);
+                titles.forEach(title => {
+                    title.style.color = '';
+                });
+            }
+        });
+    </script>
+    </script>
+
+        <div class="login-container">
+            <h2>Sobre Nós</h2>
+            <p>
+                Bem-vindo à Thurzin Martelinho de Ouro LTDA! Somos especialistas em reparos automotivos, oferecendo serviços de alta qualidade com dedicação e profissionalismo. Nossa equipe possui vasta experiência em martelinho de ouro, garantindo resultados impecáveis para seu veículo.
+            </p>
+            <p>
+                Nosso compromisso é proporcionar atendimento personalizado, transparência e satisfação total aos nossos clientes. Utilizamos técnicas modernas e equipamentos avançados para restaurar a estética do seu carro, sempre prezando pela confiança e excelência.
+            </p>
+            <p class="form-text">
+                Thurzin Martelinho de Ouro LTDA — Cuidando do seu veículo como se fosse nosso!
+            </p>
+            <p style="color: #f9f9f9;">
+                Seu carro pode nao voltar intacto!
+            </p>
+        </div>
+        <div class="text-center mt-4"></div>
+        
+        <footer class="text-center mt-5 mb-3 text-white">
+        &copy; 2025 Thurzin Martelinho de Ouro LTDA, Todos os direitos reservados.
+    </footer>
+</body>
+</html>
